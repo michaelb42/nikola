@@ -66,8 +66,8 @@ class ScaleImage(Task, ImageProcessor):
 
     def process_image(self, src, dst, thumb):
         """Resize an image."""
-        self.resize_image(src, dst, self.kw['max_image_size'], True, preserve_exif_data=self.kw['preserve_exif_data'], exif_whitelist=self.kw['exif_whitelist'], preserve_icc_profiles=self.kw['preserve_icc_profiles'])
-        self.resize_image(src, thumb, self.kw['image_thumbnail_size'], True, preserve_exif_data=self.kw['preserve_exif_data'], exif_whitelist=self.kw['exif_whitelist'], preserve_icc_profiles=self.kw['preserve_icc_profiles'])
+        self.resize_image(src, dst, self.kw['max_image_size'], self.kw['bigger_panoramas'], preserve_exif_data=self.kw['preserve_exif_data'], exif_whitelist=self.kw['exif_whitelist'], preserve_icc_profiles=self.kw['preserve_icc_profiles'])
+        self.resize_image(src, thumb, self.kw['image_thumbnail_size'], self.kw['bigger_panoramas'], preserve_exif_data=self.kw['preserve_exif_data'], exif_whitelist=self.kw['exif_whitelist'], preserve_icc_profiles=self.kw['preserve_icc_profiles'])
 
     def gen_tasks(self):
         """Copy static files into the output folder."""
@@ -75,6 +75,7 @@ class ScaleImage(Task, ImageProcessor):
             'image_thumbnail_size': self.site.config['IMAGE_THUMBNAIL_SIZE'],
             'image_thumbnail_format': self.site.config['IMAGE_THUMBNAIL_FORMAT'],
             'max_image_size': self.site.config['MAX_IMAGE_SIZE'],
+            'bigger_panoramas': self.site.config['BIGGER_PANORAMAS'],            
             'image_folders': self.site.config['IMAGE_FOLDERS'],
             'output_folder': self.site.config['OUTPUT_FOLDER'],
             'filters': self.site.config['FILTERS'],

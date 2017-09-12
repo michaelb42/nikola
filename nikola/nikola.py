@@ -414,6 +414,7 @@ class Nikola(object):
             'AUTHOR_PAGES_ARE_INDEXES': False,
             'AUTHOR_PAGES_DESCRIPTIONS': {},
             'AUTHORLIST_MINIMUM_POSTS': 1,
+            'BIGGER_PANORAMAS': True,
             'BLOG_AUTHOR': 'Default Author',
             'BLOG_TITLE': 'Default Title',
             'BLOG_EMAIL': '',
