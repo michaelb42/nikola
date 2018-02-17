@@ -75,7 +75,7 @@ class ScaleImage(Task, ImageProcessor):
             'image_thumbnail_size': self.site.config['IMAGE_THUMBNAIL_SIZE'],
             'image_thumbnail_format': self.site.config['IMAGE_THUMBNAIL_FORMAT'],
             'max_image_size': self.site.config['MAX_IMAGE_SIZE'],
-            'bigger_panoramas': self.site.config['BIGGER_PANORAMAS'],            
+            'bigger_panoramas': self.site.config['BIGGER_PANORAMAS'],
             'image_folders': self.site.config['IMAGE_FOLDERS'],
             'output_folder': self.site.config['OUTPUT_FOLDER'],
             'filters': self.site.config['FILTERS'],
