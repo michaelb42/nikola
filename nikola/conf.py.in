@@ -742,6 +742,11 @@ IMAGE_FOLDERS = {'images': 'images'}
 # IMAGE_THUMBNAIL_SIZE = 400
 # IMAGE_THUMBNAIL_FORMAT = '{name}.thumbnail{ext}'
 
+# Panorama pictures with an aspect ratio width:height >= 2:1 are
+# scaled down to 4 times the MAX_IMAGE_SIZE resp. IMAGE_THUMBNAIL_SIZE
+# by default. BIGGER_PANORAMAS may be used to disable this behaviour.
+# BIGGER_PANORAMAS = True
+
 # #############################################################################
 # HTML fragments and diverse things that are used by the templates
 # #############################################################################
